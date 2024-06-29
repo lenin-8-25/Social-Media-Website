@@ -1,0 +1,19 @@
+<li id="comment-<%= comment._id %>">
+    <p>
+        <%if(locals.user.id==comment.user._id||locals.user.id==post.user._id){%>
+            <small>
+                <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>"><i class="material-icons" style="font-size:20px;color:red">delete</i>
+                </a>
+            </small>
+            <%}%>
+            <div style="padding:10px;border: 1px solid gainsboro; margin: 5px;">
+                <%= comment.content %>
+            </div>
+            <small>
+            
+                        <%= comment.user.name %>
+            </small>
+
+    </p>
+
+</li>
